@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>DND</title>
+   <script defer src = "../scripts/ProjectHTML1.js"></script>
+</head>
+<body>
+    <h1><strong>DND Dice and Stat Roller</strong></h1>
+    <article id = 'diceRoller'>
+        <button onclick = "rollingDice(this.id)" id = "d20">Roll d20</button>
+        <input class = "hide_me" type = "text" id = 'd20Out'><br>
+
+        <button onclick = "rollingDice(this.id)" id = 'd12'>Roll d12</button>
+        <input  class = "hide_me" type = "text" id = 'd12Out'><br>
+
+        <button onclick = "rollingDice(this.id)" id = 'd10'>Roll d10</button>
+        <input class = "hide_me" type = "text" id = 'd10Out'><br>
+
+        <button onclick = "rollingDice(this.id)" id = 'd8'>Roll d8</button>
+        <input class = "hide_me" type = "text" id = 'd8Out'><br>
+
+        <button onclick = "rollingDice(this.id)" id = 'd6'>Roll d6</button>
+        <input class = "hide_me" type = "text" id = 'd6Out'><br>
+
+        <button onclick = "rollingDice(this.id)" id = 'd4'>Roll d4</button>
+        <input class = "hide_me" type = "text" id = 'd4Out'><br>
+
+        <button onclick = "rollingDice(this.id)" id = 'd3'>Roll d3</button>
+        <input class = "hide_me" type = "text" id = 'd3Out'><br>
+
+        
+        <br>
+        <button onclick = "hideAll()" id = 'd3'>Clear</button>
+    </article>
+    
+    <h2>Stat Roller</h2>
+    <article id = 'statRoller'>
+        <div>
+            Strength Modifer <input type = "text" id = 'strMod'><br>
+            Dexerity Modifer <input type = "text" id = 'dexMod'><br>
+            Consitution Modifer <input type = "text" id = 'ConMod'><br>
+            intellegence Modifer <input type = "text" id = 'intMod'><br>
+            Wisdom Modifer <input type = "text" id = 'wisMod'><br>
+            Charisma Modifer <input type = "text" id = 'chaMod'><br>
+            <br>
+            <button id = "buttonStatRoller">Submit</button>
+        </div>
+    </article>
+    <article>
+        <fieldset>
+            <legend>Skills</legend>
+            <label for = "Arcobatics">
+                <input type = "radio" name = "Arcobatics" id = "Arcobatics"/> Arcobatics (Dex)
+                 <button id = "acroButton" onclick = ""> Roll</button>
+                 <input class = "hide_skills" type = "text" id = 'arcoOut'><br>
+            </label>
+            <label for = "animalHandling">
+                <input type = "radio" name = "animalHandling" id = "animalHandling"/> Animal Handling (Wis)<br>
+            </label>
+            <label for = "arcana">
+                <input type = "radio" name = "arcana" id = "arcana"/> Arcana (Int)<br>
+            </label>
+            <label for = "athletics">
+                <input type = "radio" name = "athletics" id = "athletics"/> Athletics (Str)<br>
+            </label>
+            <label for = "deception">
+                <input type = "radio" name = "deception" id = "deception"/> Deception (Cha)<br>
+            </label>
+            <label for = "history">
+                <input type = "radio" name = "history" id = "history"/> History (Int)<br>
+            </label>
+            <label for = "insight">
+                <input type = "radio" name = "insight" id = "insight"/> Insight (Wis)<br>
+            </label>
+            <label for = "intimidation">
+                <input type = "radio" name = "intimidation" id = "intimidation"/> Intimidation (Cha)<br>
+            </label>
+            <label for = "investigation">
+                <input type = "radio" name = "investigation" id = "investigation"/> Investigation (Int)<br>
+            </label>
+            <label for = "medicine">
+                <input type = "radio" name = "medicine" id = "medicine"/> Medicine (Wis)<br>
+            </label>
+            <label for = "nature">
+                <input type = "radio" name = "nature" id = "nature"/> Nature (Int)<br>
+            </label>
+            <label for = "percep">
+                <input type = "radio" name = "percep" id = "percep"/> Perception (Wis)<br>
+            </label>
+            <label for = "performance">
+                <input type = "radio" name = "performance" id = "performance"/> performance (Cha)<br>
+            </label>
+            <label for = "persuade">
+                <input type = "radio" name = "persuade" id = "persuade"/> Persuasion (Cha)<br>
+            </label>
+            <label for = "religion">
+                <input type = "radio" name = "religion" id = "religion"/> Religion (Int)<br>
+            </label>
+            <label for = "sleight">
+                <input type = "radio" name = "sleight" id = "sleight"/> Sleight of Hand (Dex)<br>
+            </label>
+            <label for = "stealth">
+                <input type = "radio" name = "stealth" id = "stealth"/> Stealth (Dex) <br>
+            </label>
+            <label for = "survival">
+                <input type = "radio" name = "survival" id = "survival"/> survival (Wis)<br>
+            </label>
+        </fieldset>
+    </article>
+</body>
+</html>
