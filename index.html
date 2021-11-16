@@ -3,7 +3,8 @@
 <head>
    <meta charset="utf-8">
    <title>DND</title>
-   <script defer src = "ProjectHTML1.js"></script>
+   <script defer src = "/scripts/ProjectHTML1.js"></script>
+   <link rel="stylesheet" href="/styles/project1Styles.css">
 </head>
 <body>
     <h1><strong>DND Dice and Stat Roller</strong></h1>
@@ -51,60 +52,94 @@
         <fieldset>
             <legend>Skills</legend>
             <label for = "Arcobatics">
+                <button class = skillButton id = "acroButton" onclick = ""> Roll</button>
                 <input type = "radio" name = "Arcobatics" id = "Arcobatics"/> Arcobatics (Dex)
-                 <button id = "acroButton" onclick = ""> Roll</button>
-                 <input class = "hide_skills" type = "text" id = 'arcoOut'><br>
+                <input class = "hide_skills" type = "text" id = 'arcoOut'><br>
             </label>
             <label for = "animalHandling">
-                <input type = "radio" name = "animalHandling" id = "animalHandling"/> Animal Handling (Wis)<br>
+                <button class = skillButton id = "AnimalButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "animalHandling" id = "animalHandling"/> Animal Handling (Wis)
+                <input class = "hide_skills" type = "text" id = 'animalOut'><br>
             </label>
             <label for = "arcana">
-                <input type = "radio" name = "arcana" id = "arcana"/> Arcana (Int)<br>
+                <button class = skillButton id = "ArcanButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "arcana" id = "arcana"/> Arcana (Int)
+                <input class = "hide_skills" type = "text" id = 'arcanaOut'><br>
             </label>
             <label for = "athletics">
-                <input type = "radio" name = "athletics" id = "athletics"/> Athletics (Str)<br>
+                <button class = skillButton id = "AthletButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "athletics" id = "athletics"/> Athletics (Str)
+                <input class = "hide_skills" type = "text" id = 'athletOut'><br>
             </label>
             <label for = "deception">
-                <input type = "radio" name = "deception" id = "deception"/> Deception (Cha)<br>
+                <button class = skillButton id = "decepButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "deception" id = "deception"/> Deception (Cha)
+                <input class = "hide_skills" type = "text" id = 'decepOut'><br>
             </label>
             <label for = "history">
-                <input type = "radio" name = "history" id = "history"/> History (Int)<br>
+                <button class = skillButton id = "histButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "history" id = "history"/> History (Int)
+                <input class = "hide_skills" type = "text" id = 'historyOut'><br>
             </label>
             <label for = "insight">
-                <input type = "radio" name = "insight" id = "insight"/> Insight (Wis)<br>
+                <button class = skillButton id = "insightButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "insight" id = "insight"/> Insight (Wis)
+                <input class = "hide_skills" type = "text" id = 'insightOut'><br>
             </label>
             <label for = "intimidation">
-                <input type = "radio" name = "intimidation" id = "intimidation"/> Intimidation (Cha)<br>
+                <button class = skillButton id = "intimButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "intimidation" id = "intimidation"/> Intimidation (Cha)
+                <input class = "hide_skills" type = "text" id = 'intimidOut'><br>
             </label>
             <label for = "investigation">
-                <input type = "radio" name = "investigation" id = "investigation"/> Investigation (Int)<br>
+                <button class = skillButton id = "investButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "investigation" id = "investigation"/> Investigation (Int)
+                <input class = "hide_skills" type = "text" id = 'investOut'><br>
             </label>
             <label for = "medicine">
-                <input type = "radio" name = "medicine" id = "medicine"/> Medicine (Wis)<br>
+                <button class = skillButton id = "medicButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "medicine" id = "medicine"/> Medicine (Wis)
+                <input class = "hide_skills" type = "text" id = 'medicineOut'><br>
             </label>
             <label for = "nature">
-                <input type = "radio" name = "nature" id = "nature"/> Nature (Int)<br>
+                <button class = skillButton id = "naturButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "nature" id = "nature"/> Nature (Int)
+                <input class = "hide_skills" type = "text" id = 'natureOut'><br>
             </label>
             <label for = "percep">
-                <input type = "radio" name = "percep" id = "percep"/> Perception (Wis)<br>
+                <button class = skillButton id = "percepButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "percep" id = "percep"/> Perception (Wis)
+                <input class = "hide_skills" type = "text" id = 'percepOut'><br>
             </label>
             <label for = "performance">
-                <input type = "radio" name = "performance" id = "performance"/> performance (Cha)<br>
+                <button class = skillButton id = "peformButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "performance" id = "performance"/> performance (Cha)
+                <input class = "hide_skills" type = "text" id = 'performOut'><br>
             </label>
             <label for = "persuade">
-                <input type = "radio" name = "persuade" id = "persuade"/> Persuasion (Cha)<br>
+                <button class = skillButton id = "persuaButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "persuade" id = "persuade"/> Persuasion (Cha)
+                <input class = "hide_skills" type = "text" id = 'persuadeOut'><br>
             </label>
             <label for = "religion">
-                <input type = "radio" name = "religion" id = "religion"/> Religion (Int)<br>
+                <button class = skillButton id = "religionButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "religion" id = "religion"/> Religion (Int)
+                <input class = "hide_skills" type = "text" id = 'religionOut'><br>
             </label>
             <label for = "sleight">
-                <input type = "radio" name = "sleight" id = "sleight"/> Sleight of Hand (Dex)<br>
+                <button class = skillButton id = "sleightButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "sleight" id = "sleight"/> Sleight of Hand (Dex)
+                <input class = "hide_skills" type = "text" id = 'sleightOut'><br>
             </label>
             <label for = "stealth">
-                <input type = "radio" name = "stealth" id = "stealth"/> Stealth (Dex) <br>
+                <button class = skillButton id = "stealthButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "stealth" id = "stealth"/> Stealth (Dex) 
+                <input class = "hide_skills" type = "text" id = 'stealthOut'><br>
             </label>
             <label for = "survival">
-                <input type = "radio" name = "survival" id = "survival"/> survival (Wis)<br>
+                <button class = skillButton id = "survivalButton" onclick = ""> Roll</button>
+                <input type = "radio" name = "survival" id = "survival"/> survival (Wis)
+                <input class = "hide_skills" type = "text" id = 'survialOut'><br>
             </label>
         </fieldset>
     </article>
