@@ -69,11 +69,25 @@ class statInput{
 
     
     }
+    // after you have typed in your information about your character you hit the submit button and it hides the section you can change it later by hitting the edit button
     hideInfo(){
         var article = document.getElementById('characterInfo');
         article.style.display = "none";
+        // adding button the article Dice Roller
+        let showButton = document.createElement('button');
+        let paste = document.getElementById('multipleDiceRoller');
+        showButton.innerHTML = "edit Info";
+        showButton.type = "submit";
+        showButton.id = "show";
+        paste.appendChild(showButton);
+        // fucntion of new button toshow the character info again.
+        showButton.onclick = function(event) {
+            article.style.display = "";
+            showButton.style.display = "none";
+        }
     }
     rollSkill(clicked_id){
+        // grabs the data needed to make the roles happen for the skills it is taken from the Character section of the webstie.
         this.initProfecMod = document.getElementById("profecMod").value;
         this.initStrMod = document.getElementById("strMod").value;
         this.initDexMod = document.getElementById("dexMod").value;
@@ -81,278 +95,550 @@ class statInput{
         this.initIntMod = document.getElementById("intMod").value;
         this.initWisMod  = document.getElementById("wisMod").value;
         this.initChaMod = document.getElementById("chaMod").value;
-
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'acroButton'){
             if(document.getElementById("Arcobatics").checked){
-                let die20 = Math.floor(Math.random() * 20) + 1;
-                die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initDexMod);
                 let txt20Output = document.getElementById('arcoOut');
-                txt20Output.value = die20;
+                let die20 = Math.floor(Math.random() * 20) + 1;
+                die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initDexMod); 
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
+                
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initDexMod);
                 let txt20Output = document.getElementById('arcoOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'AnimalButton'){
             if(document.getElementById("animalHandling").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('animalOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('animalOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'ArcanButton'){
             if(document.getElementById("arcana").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('animalOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('arcanaOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'AthletButton'){
             if(document.getElementById("athletics").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initStrMod);
                 let txt20Output = document.getElementById('athletOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initStrMod);
                 let txt20Output = document.getElementById('athletOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'decepButton'){
             if(document.getElementById("deception").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('decepOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('decepOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'histButton'){
             if(document.getElementById("history").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('historyOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('historyOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'insightButton'){
             if(document.getElementById("insight").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('insightOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('insightOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'intimButton'){
             if(document.getElementById("intimidation").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('intimidOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('intimidOut');
+                if(die20 < 1){
+                die20 = 1;
                 txt20Output.value = die20;
+            }
+            else{
+                txt20Output.value = die20;
+            }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'investButton'){
             if(document.getElementById("investigation").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('investOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('investOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'medicButton'){
             if(document.getElementById("medicine").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('medicineOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('medicineOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'naturButton'){
             if(document.getElementById("nature").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('natureOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('natureOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'percepButton'){
             if(document.getElementById("percep").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('percepOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('percepOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'peformButton'){
             if(document.getElementById("performance").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('performOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('performOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'persuaButton'){
             if(document.getElementById("persuade").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('persuadeOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initChaMod);
                 let txt20Output = document.getElementById('persuadeOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'religionButton'){
             if(document.getElementById("religion").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('religionOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initIntMod);
                 let txt20Output = document.getElementById('religionOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'sleightButton'){
             if(document.getElementById("sleight").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initDexMod);
                 let txt20Output = document.getElementById('sleightOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initDexMod);
                 let txt20Output = document.getElementById('sleightOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'stealthButton'){
             if(document.getElementById("sleight").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initDexMod);
                 let txt20Output = document.getElementById('stealthOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initDexMod);
                 let txt20Output = document.getElementById('stealthOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
+        //button that roll a specfic skill it rolls a random number from 1 to 20 then adds or subtracts the stat modeifer for that potecualr skill then check to see if the player 
+        // was profeienct in that skill and add that bonus if it was true.
+        // also checked if the role would be below 1 it changes it to one bacause you canot roll less than a one
         if(clicked_id == 'survivalButton'){
             if(document.getElementById("survival").checked){
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initProfecMod) + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('survialOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             else{
                 let die20 = Math.floor(Math.random() * 20) + 1;
                 die20 = die20 + parseInt(this.initWisMod);
                 let txt20Output = document.getElementById('survialOut');
-                txt20Output.value = die20;
+                if(die20 < 1){
+                    die20 = 1;
+                    txt20Output.value = die20;
+                }
+                else{
+                    txt20Output.value = die20;
+                }
             }
             
         }
     }
+    //Code fot the clear button that clears all the skill input boxes that had pervious rolls the rolling does this already but if it there for the user just in case that had to many numbers 
+    // the screen
     hideSkills(){
         let hide = document.getElementsByClassName("hide_skills");
         for (let el of hide) {
@@ -360,6 +646,35 @@ class statInput{
         }
     }
 }
+//This initlizes the class for rolling the skill portion of the website
 let In = new statInput(0, 0, 0, 0, 0, 0)
+function formdata() 
+        {
+        let rollReq= document.getElementById("request").value;
+
+            let [numRolls, numSides, modifier] = rollReq.split(/[dD+-]{1}/);
+            //let mod = rollReq.match(/([+-]{1})([0-9]{1,})/);
+            console.log(numRolls, numSides, modifier);
+            rollDie(numRolls, numSides, modifier);
+        }    
+
+
+function rollDie(numRolls, numSides, modifier) {
+    //this function is a for loop that will roll a (numSides) die (numRoll) times
+    if (modifier == undefined){
+        modifier = 0;
+    }
+    if (numRolls && numSides)
+        var result = 0
+        
+        for(let step = 0; step < numRolls; step++){
+
+            result += (1 + Math.floor(Math.random()*numSides))
+        }
+        //+ + will turn the variable from a string into a number
+        let total = result + + modifier
+    console.log(total);
+    document.getElementById("outRequest").value = total;
+ }
 
 
