@@ -7,8 +7,8 @@
    <link rel="stylesheet" href="styles/project1Styles.css"/>
 </head>
 <body>
-    <h1><strong>DND Dice and Stat Roller</strong></h1>
     <article id = 'diceRoller'>
+        <h1>DND Dice and Stat Roller</h1>
         <button onclick = "rollingDice(this.id)" id = "d20">Roll d20</button>
         <input class = "hide_me" type = "text" id = 'd20Out'><br>
 
@@ -31,8 +31,13 @@
         <input class = "hide_me" type = "text" id = 'd3Out'><br>
         <button onclick = "hideAll()" id = 'd3'>Clear</button>
     </article>
-    
-    
+    <article id = 'multipleDiceRoller'>
+        <p>
+            <button onclick = "formdata() ">roll</button>
+            <input type = "text" id = "request"> =
+            <input type = "text" id = "outRequest">
+        </p>
+    </article>
     <article id = 'characterInfo'>
         <h2>Character Info</h2>
         <div>
@@ -48,7 +53,6 @@
             </p>
         </div>
     </article>
-    
     <article>
         <fieldset id = "skillsSection">
             <legend>Skills</legend>
@@ -56,7 +60,7 @@
             <label for = "Arcobatics">
                 <button class = skillButton id = "acroButton" onclick = "In.rollSkill(this.id)"></button>
                 <input type = "checkbox" name = "Arcobatics" id = "Arcobatics"/> Arcobatics (Dex)
-                <input class = "hide_skills" type = "text" id = 'arcoOut'><br>
+                <input class = "hide_skills"  type = "text" id = 'arcoOut'><br>
             </label>
             <label for = "animalHandling">
                 <button class = skillButton id = "AnimalButton" onclick = "In.rollSkill(this.id)"></button>
