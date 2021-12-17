@@ -41,20 +41,49 @@ function hideAll(){
         el.value = "";
     }
 }
+function updatePrice(f){
+    if (f.key == "Enter"){
+        ls.price = +f.target.value;
+        ls.updateAdmin();
+    }
 
-class statModRoller{
-    constructor(initStrMod, initDexMod, initConMod, initIntMod, initWisMod
+}
+function initUpdatePrice(){
+    let priceUpdate = document.querySelectorAll(".update");
+    for (let el of priceUpdate){
+        el.addEventListener("click", showInput, false);
+        el.addEventListener("keyup", updatePrice);
+    }
+}
+class statInput{
+    constructor(level, initStrMod, initDexMod, initConMod, initIntMod, initWisMod
         , initChaMod) {
-        this.strMod = initStrMod;
-        this.dexMod = initDexMod;
-        this.conMod = initConMod;
-        this.intMod = initIntMod;
-        this.wisMod = initWisMod;
-        this.chaMod = initChaMod;
+            this.classLevel = level;
+            this.strMod = initStrMod;
+            this.dexMod = initDexMod;
+            this.conMod = initConMod;
+            this.intMod = initIntMod;
+            this.wisMod = initWisMod;
+            this.chaMod = initChaMod;
 
 
     
     }
+    inputChar(){
+        this.level = document.getElementById("classLvl").value;
+        this.initStrMod = document.getElementById("strMod").value;
+        this.initDexMod = document.getElementById("dexMod").value;
+        this.initConMod = document.getElementById("conMod").value;
+        this.initIntMod = document.getElementById("intMod").value;
+        this.initWisMod = document.getElementById("wisMod").value;
+        this.initChaMod = document.getElementById("chaMod").value;
+        this.testing(this.level);
+    }
+    skill(level){
+        level.value;
+        console.log(level);
+    }
 }
-//let ls = new statModRoller(0, 0, 0, 0, 0, 0)
+let In = new statInput(0, 0, 0, 0, 0, 0)
+
 
