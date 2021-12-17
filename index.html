@@ -35,18 +35,22 @@
     <h2>Stat Roller</h2>
     <article id = 'statRoller'>
         <div>
-            Strength Modifer <input type = "text" id = 'strMod'><br>
-            Dexerity Modifer <input type = "text" id = 'dexMod'><br>
-            Consitution Modifer <input type = "text" id = 'ConMod'><br>
-            intellegence Modifer <input type = "text" id = 'intMod'><br>
-            Wisdom Modifer <input type = "text" id = 'wisMod'><br>
-            Charisma Modifer <input type = "text" id = 'chaMod'><br>
-            <button id = "buttonStatRoller">Submit</button>
+            <p>
+                Class level <input type = "text" id = 'classLvl'><br>
+                Strength Modifer <input type = "text" id = 'strMod'><br>
+                Dexerity Modifer <input type = "text" id = 'dexMod'><br>
+                Consitution Modifer <input type = "text" id = 'conMod'><br>
+                intellegence Modifer <input type = "text" id = 'intMod'><br>
+                Wisdom Modifer <input type = "text" id = 'wisMod'><br>
+                Charisma Modifer <input type = "text" id = 'chaMod'><br>
+                <button onclick = "In.inputChar()" id = "buttonStatRoller">Submit</button>
+            </p>
         </div>
     </article>
     <article>
         <fieldset id = "skillsSection">
             <legend>Skills</legend>
+            Profecinecy (Y/N)<br>
             <label for = "Arcobatics">
                 <button class = skillButton id = "acroButton" onclick = ""></button>
                 <input type = "checkbox" name = "Arcobatics" id = "Arcobatics"/> Arcobatics (Dex)
@@ -109,7 +113,7 @@
             </label>
             <label for = "performance">
                 <button class = skillButton id = "peformButton" onclick = ""></button>
-                <input type = "checkbox" name = "performance" id = "performance"/> performance (Cha)
+                <input type = "checkbox" name = "performance" id = "performance"/> Performance (Cha)
                 <input class = "hide_skills" type = "text" id = 'performOut'><br>
             </label>
             <label for = "persuade">
@@ -134,7 +138,7 @@
             </label>
             <label for = "survival">
                 <button class = skillButton id = "survivalButton" onclick = ""></button>
-                <input type = "checkbox" name = "survival" id = "survival"/> survival (Wis)
+                <input type = "checkbox" name = "survival" id = "survival"/> Survival (Wis)
                 <input class = "hide_skills" type = "text" id = 'survialOut'><br>
             </label>
         </fieldset>
