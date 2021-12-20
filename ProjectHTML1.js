@@ -1,3 +1,4 @@
+// A function to roll dice based on the ID of the button clicked will role a spefic button
 function rollingDice(clicked_id){
     if(clicked_id == 'd20'){
         let die20 = Math.floor(Math.random() * 20) + 1;
