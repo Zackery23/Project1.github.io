@@ -1,3 +1,15 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color:aqua;
+}
+html{
+    background-image: url("../images/720X720-logo.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .skillButton{
     background-image: url("../images/D20Button.png");
     background-repeat: no-repeat;
@@ -6,3 +18,35 @@
     width: 17px;
     border: none;
 }
+.hide_me{
+    width: 1em;
+    height: 1em;
+    font-size: 135%;
+}
+.charInfo{
+    width: 1em;
+    display:block;
+    
+}
+#diceRoller>button{
+    width: 5em;
+    height: 2em;
+    
+}
+#outRequest{
+    width: 5em;
+}
+input{
+    border-color: aqua;
+    width: 1em;
+}
+button{
+    border-color:aqua;
+    background-color:darkblue;
+}
+.tabContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
