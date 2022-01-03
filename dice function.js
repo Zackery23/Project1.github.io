@@ -29,3 +29,17 @@ function rollDie(numRolls, numSides, modifier) {
     console.log(total);
     return total
 }
+function updatePrice(f){
+    if (f.key == "Enter"){
+        ls.price = +f.target.value;
+        ls.updateAdmin();
+    }
+
+}
+function initUpdatePrice(){
+    let priceUpdate = document.querySelectorAll(".update");
+    for (let el of priceUpdate){
+        el.addEventListener("click", showInput, false);
+        el.addEventListener("keyup", updatePrice);
+    }
+}
