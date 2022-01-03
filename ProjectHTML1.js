@@ -42,20 +42,6 @@ function hideAll(){
         el.value = "";
     }
 }
-function updatePrice(f){
-    if (f.key == "Enter"){
-        ls.price = +f.target.value;
-        ls.updateAdmin();
-    }
-
-}
-function initUpdatePrice(){
-    let priceUpdate = document.querySelectorAll(".update");
-    for (let el of priceUpdate){
-        el.addEventListener("click", showInput, false);
-        el.addEventListener("keyup", updatePrice);
-    }
-}
 class statInput{
     constructor(initProfecMod, initStrMod, initDexMod, initConMod, initIntMod, initWisMod
         , initChaMod) {
@@ -76,7 +62,7 @@ class statInput{
         article.style.display = "none";
         // adding button the article Dice Roller
         let showButton = document.createElement('button');
-        let paste = document.getElementById('multipleDiceRoller');
+        let paste = document.getElementById('tab');
         showButton.innerHTML = "edit Info";
         showButton.type = "submit";
         showButton.id = "show";
@@ -677,5 +663,32 @@ function rollDie(numRolls, numSides, modifier) {
     console.log(total);
     document.getElementById("outRequest").value = total;
  }
+ //function make the input change based on what is type into for the equation of mutiple dice rolling
+ function adaptiveInput(){
+    var input = document.getElementById("request"); // get the input element
+    input.addEventListener('input', resizeInput); // bind the "resizeInput" callback on "input" event
+    resizeInput.call(input); // immediately call the function
+ }
+
+function resizeInput() {
+  this.style.width = this.value.length + "ch";
+}
+//function to run the tabs of the webiste to change when you click on the button of a particular section of the page
+function changeSection(evt, section) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabContent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(section).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+adaptiveInput();
+
+
 
 
